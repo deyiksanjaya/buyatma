@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATMA by Heri Sanjaya - An Experiment in Retrocognition</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for that vintage newspaper feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to enhance the newspaper theme */
+        body {
+            font-family: 'Lora', serif;
+            background-color: #fdfaf3; /* Aged paper color */
+            color: #1a1a1a;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .newspaper-title {
+            font-size: 4rem;
+            line-height: 1;
+            text-align: center;
+            border-bottom: 4px double #1a1a1a;
+            border-top: 1px solid #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+        .dateline {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            text-align: center;
+            color: #555;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .article-column {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            -webkit-column-gap: 2rem;
+            -moz-column-gap: 2rem;
+            column-gap: 2rem;
+        }
+        /* Responsive column handling */
+        @media (max-width: 768px) {
+            .article-column {
+                -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
+            }
+            .newspaper-title {
+                font-size: 2.5rem; /* Smaller font size on mobile */
+            }
+        }
+        .pull-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+            border-left: 4px solid #1a1a1a;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            color: #000;
+        }
+        .video-container {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            background-color: #f5f0e8;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .buy-button {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #fdfaf3;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            border: 2px solid #1a1a1a;
+            box-shadow: 4px 4px 0px #c9c4b9;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+        }
+        .buy-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #c9c4b9;
+        }
+        .buy-button:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px #c9c4b9;
+        }
+        .buy-button .main-text {
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
+            display: block;
+        }
+        .buy-button .sub-text {
+            font-family: 'Lora', serif;
+            font-size: 0.8rem;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            opacity: 0.9;
+            display: block;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Newspaper Title -->
+        <header>
+            <h1 class="newspaper-title">ATMA BY HERI SANJAYA</h1>
+            <p class="dateline">Special Dispatch — A Report on Paranormal Phenomena</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Main Article Section (spans 2 columns on large screens) -->
+            <div class="lg:col-span-2">
+                <h2 class="text-4xl md:text-5xl mb-4 leading-tight">THE VEIL IS TORN: A CHILLING ENCOUNTER FROM BEYOND THE GRAVE</h2>
+                <p class="text-lg text-gray-600 mb-6 border-b pb-4"><strong>From the mind of Heri Sanjaya</strong> comes an experiment in retrocognition that will haunt your audience long after the lights go out.</p>
+
+                <div class="article-column text-base leading-relaxed text-justify">
+                    <p class="mb-4">You don't just tell a ghost story. You create one, with your spectator as the unwilling medium. This is <strong>ATMA</strong>.</p>
+                    
+                    <p class="mb-4">The experiment begins under the guise of channeling a soul from the past. You introduce three lists, relics of a forgotten tragedy: the names of victims, the scenes of the crime, and the fatal instruments. There is no force, no ambiguity. The spectator is given complete freedom to choose one from each list—a name, a place, a weapon.</p>
+                    
+                    <p class="mb-4">Their choices feel random, arbitrary. Yet, you explain that a connection has been made. To prove it, you reveal a simple QR code. It leads not to a news website.&nbsp;</p>
+                    
+                    <p class="mb-4">As they read the headline, a shiver runs down their spine. The article details a gruesome family murder. The victim's name? The one they just chose. The location? The very place they selected. The cause of death? The exact object they named. Every detail, freely chosen, is the exact match with the news written a long time ago.</p>
+
+                    <p class="pull-quote">"This isn't a trick. It's an experience. It's real, visceral, and utterly terrifying."</p>
+
+                    <p class="mb-4">But the true horror is yet to come. Embedded in the article is a photograph of the doomed family, taken just after the tragedy. You ask the spectator a simple question: "Do you see the complete family in the photograph?" They confidently answer "Yes."</p>
+
+                    <p class="mb-4">You ask them to look closer. To focus. As their eyes scan the image again, the impossible happens. One of the family members they swore they saw is now... gone. Vanished from the photograph as if they were never there.</p>
+
+                    <p class="font-bold italic mt-4">"There was never anyone there," you whisper. "Perhaps... the person who was murdered simply wanted to make their presence known to you."</p>
+                </div>
+            </div>
+
+            <!-- Sidebar Section (Video and Purchase) -->
+            <aside class="lg:col-span-1">
+                <div class="sticky top-8">
+                    <!-- Video Trailer Section -->
+                    <div class="video-container mb-8">
+                        <h3 class="text-2xl mb-2 text-center">Witness The Phenomenon</h3>
+                        
+                        <!-- 
+                            VIDEO TRAILER:
+                            Replace the div below with your YouTube or Vimeo embed code.
+                            Example for YouTube: <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                        -->
+                        <div class="w-full aspect-video bg-black flex items-center justify-center text-white font-serif">
+                            [ Your Video Trailer Here ]
+                        </div>
+                        <p class="text-center text-sm italic mt-2 text-gray-600">A cinematic preview of the ATMA experience.</p>
+                    </div>
+
+                    <!-- Purchase Section -->
+                    <div class="border-2 border-dashed border-gray-800 p-6 text-center bg-amber-50">
+                        <h3 class="text-3xl mb-4">Acquire The Secret</h3>
+                        <p class="mb-6">Become one of the few to possess the power of ATMA.</p>
+                        
+                        <ul class="text-left list-disc list-inside mb-6 space-y-2">
+                            <li>No complex sleight of hand.</li>
+                            <li>Uses any modern smartphone.</li>
+                            <li>The chilling photographic climax.</li>
+                            <li>Instant digital delivery.</li>
+                        </ul>
+
+                        <!-- 
+                            BUY BUTTON:
+                            Replace the "#" in the href attribute below with your Gumroad (or other) purchase link.
+                        -->
+                        <a href="#" class="buy-button w-full text-center py-3 px-6 rounded-sm">
+                           <span class="main-text">Purchase Now</span>
+                           <span class="sub-text">Instant Digital Dispatch</span>
+                        </a>
+                    </div>
+                    <p class="text-xs text-center mt-4 text-gray-500">A creation by Heri Sanjaya. All rights reserved.</p>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+</body>
+</html>
