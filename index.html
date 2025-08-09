@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATMA by Heri Sanjaya - An Experiment in Retrocognition</title>
+    <title>ATMA by Heri Sanjaya</title>
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,6 +19,8 @@
             font-family: 'Lora', serif;
             background-color: #fdfaf3; /* Aged paper color */
             color: #1a1a1a;
+            position: relative; /* Needed for absolute positioning of stains */
+            overflow-x: hidden; /* Prevent horizontal scroll from stains */
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
@@ -59,7 +61,7 @@
                 column-count: 1;
             }
             .newspaper-title {
-                font-size: 2.5rem; /* Smaller font size on mobile */
+                font-size: 2.5rem;
             }
         }
         .pull-quote {
@@ -79,43 +81,41 @@
             box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
         .buy-button {
-            display: inline-block;
             background-color: #1a1a1a;
             color: #fdfaf3;
             font-family: 'Playfair Display', serif;
             text-transform: uppercase;
+            letter-spacing: 1px;
             border: 2px solid #1a1a1a;
-            box-shadow: 4px 4px 0px #c9c4b9;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-decoration: none;
+            transition: all 0.3s ease;
         }
         .buy-button:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px #c9c4b9;
+            background-color: #fdfaf3;
+            color: #1a1a1a;
         }
-        .buy-button:active {
-            transform: translate(4px, 4px);
-            box-shadow: 0px 0px 0px #c9c4b9;
-        }
-        .buy-button .main-text {
-            font-size: 1.5rem;
-            letter-spacing: 1.5px;
-            display: block;
-        }
-        .buy-button .sub-text {
-            font-family: 'Lora', serif;
-            font-size: 0.8rem;
-            text-transform: none;
-            letter-spacing: 0.5px;
-            font-weight: 400;
-            opacity: 0.9;
-            display: block;
+        
+        /* Blood stain image styling */
+        .blood-stain {
+            position: absolute;
+            background-image: url('https://down-yuantu.pngtree.com/element_our/20220801/bg/50493c5c66e4c.png?e=1754740488&st=ZDdlNTQxYjZmNjBiNTI0MmJlYTI2OWRiZjk2YjcxNzI&n=—Pngtree—splash+red+paint+blood+stain_8483619.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none; /* So they don't block clicks */
+            z-index: 10;
         }
     </style>
 </head>
 <body class="p-4 md:p-8">
 
-    <div class="max-w-6xl mx-auto">
+    <!-- Blood Stains positioned randomly and safely inside the viewport -->
+    <div class="blood-stain" style="width: 200px; height: 200px; top: 10%; left: 2%; transform: rotate(-15deg); opacity: 0.8;"></div>
+    <div class="blood-stain" style="width: 130px; height: 130px; top: 25%; right: 5%; transform: rotate(20deg); opacity: 0.7;"></div>
+    <!-- FIX: The problematic stain is now positioned with a larger, fixed unit from the right edge -->
+    <div class="blood-stain" style="width: 280px; height: 280px; bottom: 5%; right: 3rem; transform: rotate(10deg); opacity: 0.9;"></div>
+    <div class="blood-stain" style="width: 100px; height: 100px; bottom: 35%; left: 48%; transform: rotate(95deg); opacity: 0.6;"></div>
+
+
+    <div class="max-w-6xl mx-auto relative z-0">
         
         <!-- Newspaper Title -->
         <header>
@@ -181,11 +181,10 @@
 
                         <!-- 
                             BUY BUTTON:
-                            Replace the "#" in the href attribute below with your Gumroad (or other) purchase link.
+                            Replace the "#" with your Gumroad (or other) purchase link.
                         -->
-                        <a href="#" class="buy-button w-full text-center py-3 px-6 rounded-sm">
-                           <span class="main-text">Purchase Now</span>
-                           <span class="sub-text">Instant Digital Dispatch</span>
+                        <a href="#" class="buy-button inline-block w-full text-center py-4 px-6 text-xl rounded-sm shadow-lg">
+                           Purchase Now
                         </a>
                     </div>
                     <p class="text-xs text-center mt-4 text-gray-500">A creation by Heri Sanjaya. All rights reserved.</p>
